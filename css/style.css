@@ -1,1 +1,184 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+#preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  -webkit-animation: cacherLeLoader 5s forwards linear;
+          animation: cacherLeLoader 5s forwards linear;
+}
+
+@-webkit-keyframes cacherLeLoader {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cacherLeLoader {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Shrikhand", cursive;
+  height: 17px;
+}
+
+header .logo-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 64px;
+  padding-top: 21px;
+  padding-bottom: 12px;
+}
+
+header .logo-header img {
+  width: 160px;
+  height: 23px;
+}
+
+header .logo-header .localisation {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 51px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*composants*/
+main {
+  margin: auto;
+}
+
+main .cards-restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .cards-restaurant .card img {
+  width: 375px;
+  height: 174px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .description {
+  width: 100%;
+  height: 288px;
+  padding-top: 42px;
+  margin: auto;
+}
+
+main .button1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 220px;
+  height: 50px;
+  text-align: center;
+  border-radius: 30px;
+  background: linear-gradient(175deg, #FF79DA 10%, #9356DC 95%);
+  -webkit-transition: -webkit-box-shadow 150ms linear, -webkit-transform 150ms linear;
+  transition: -webkit-box-shadow 150ms linear, -webkit-transform 150ms linear;
+  transition: box-shadow 150ms linear, transform 150ms linear;
+  transition: box-shadow 150ms linear, transform 150ms linear, -webkit-box-shadow 150ms linear, -webkit-transform 150ms linear;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+main .fonctionnement {
+  width: 100%;
+  height: 442px;
+}
+
+main .restaurants {
+  width: 100%;
+  height: 1226px;
+}
+
+footer {
+  background-color: #535353;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 100%;
+  height: 199;
+}
+
+footer a {
+  color: white;
+  margin-left: 13px;
+  text-decoration: none;
+}
+
+footer .logo-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 27px 27px;
+}
+
+footer .logo-footer img {
+  width: 96px;
+  height: 15px;
+}
+
+footer .menu-liste {
+  padding: 15px 15px;
+}
+/*# sourceMappingURL=style.css.map */
