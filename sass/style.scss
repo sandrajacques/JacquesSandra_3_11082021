@@ -1,111 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+
+@import "base";
 @import "loader"; 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: "Roboto", sans-serif;
-  
-}
-h1,
-h2 {
-  font-family: "Shrikhand", cursive;
-  height: 17px;
-}
-header {
-.logo-header {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 64px;
-    padding-top: 21px;
-    padding-bottom: 12px;
-    img{
-        width: 160px;
-        height: 23px;
-        
-    }
-
-    .localisation {
-    background-color: rgb(234, 234, 234);
-    width: 100%;
-    height: 51px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-}
-}
-/*composants*/
-main{
-    margin: auto;
-    .cards-restaurant{
-        display: flex;
-        flex-wrap: wrap;
-        .card{
-            img {
-            width: 375px;
-            height: 174px;
-            object-fit: cover;
-            }
-        }
-    }
-    .description{
-        width: 100%;
-        height: 288px;
-        padding-top: 42px;
-        margin: auto;
-        }
-    .button1{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 220px;
-            height: 50px;
-            text-align: center;
-            border-radius: 30px;
-            background: linear-gradient(175deg, #FF79DA 10%, #9356DC 95%);
-            transition: box-shadow 150ms linear, transform 150ms linear;
-            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
-        }
+@import "layout";
+@import "components";
+@import "pages";
+@import "utils";
 
     
-    .fonctionnement{
-        width: 100%;
-        height: 442px;
-    }
-    .restaurants{
-        width: 100%;
-        height: 1226px;
-    }
-}
-footer{
-    background-color: #535353;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 100%;
-    height: 199;
-    
-    a{
-        color: white;
-        margin-left: 13px;
-        text-decoration: none;
-    }
-    .logo-footer{
-        display: flex;
-        padding: 27px 27px;
-        img{
-            width: 96px;
-            height: 15px;
-            }
-    }
-    .menu-liste{
-        padding: 15px 15px ;
 
-    }
-}
 
