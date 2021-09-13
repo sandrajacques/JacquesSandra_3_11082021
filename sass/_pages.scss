@@ -1,1 +1,118 @@
 /*pages pour les restaurants*/
+
+.entete {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 29px;
+
+    .fleche {
+        margin-right: 65px;
+        margin-left: 25px;
+    }
+    .logo {
+        img {
+            width: 160px;
+            height: 23px;
+        }
+    }
+}
+.photo-restaurant {
+    img {
+        width: 376px;
+        height: 40vh;
+        margin-top: 18px;
+        object-fit: cover;
+        background-image: url(../images/restaurants/la-palette-du-gout.jpg);
+    }
+}
+.fiche-resto {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: rgba(246, 246, 246, 246);
+    border-radius: 40px 40px 0;
+    margin-top: -60px;
+    position: absolute;
+    .titre-et-coeur {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .titre-fiche {
+        font-size: 1.6em;
+        padding-top: 33px;
+        margin-left: 22px;
+        margin-bottom: 45px;
+    }
+    .menu-titre{
+            text-decoration: underline 4px rgb(153, 226, 208);
+            
+        
+    }
+    .card-menu{
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+        border-radius: 20px;
+        background: white;
+        box-shadow: -1px 2px 15px 3px rgba(246,246,246,0.35);
+        margin: 10px;
+        height: 69px;
+        .card-accompagnement{
+            justify-content: flex-start;
+        }
+        .card-choix{
+            background: rgb(153, 226, 208);
+            i{
+                background: white;
+            color: rgb(153, 226, 208);
+            }
+        }
+
+    }
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 34px;
+    margin-bottom: 55px;
+    margin-left: 80px;
+    width: 220px;
+    height: 48px;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(to left top, $couleurSecondaire, $couleurPrimaire);
+    border: none;
+    color: white;
+    font-size: medium;
+
+}
+footer{
+    background-color: #535353;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    justify-content: flex-end;
+    
+
+    a {
+        color: white;
+        margin-left: 13px;
+        text-decoration: none;
+    }
+    .logo-footer {
+        display: flex;
+        padding: 27px 27px;
+        img {
+            width: 96px;
+            height: 15px;
+        }
+    }
+    .menu-liste {
+        padding: 15px 15px;
+    }
+}

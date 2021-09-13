@@ -12,13 +12,8 @@
     height: 48px;
     text-align: center;
     border-radius: 30px;
-    background: linear-gradient(
-        175deg,
-        $couleurSecondaire 10%,
-        $couleurPrimaire 95%
-    );
-    transition: box-shadow 150ms linear, transform 150ms linear;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to left top, $couleurSecondaire, $couleurPrimaire);
+    border: none;
 }
 .description {
     justify-content: center;
@@ -43,13 +38,12 @@
     }
 }
 
-
 .fonctionnement {
     position: relative;
     width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
-    
+
     .bloc-choix {
         display: flex;
         flex-wrap: wrap;
@@ -59,32 +53,33 @@
         .choix-numero {
             background-color: $couleurPrimaire;
             border-radius: 100px;
-            position: absolute;left: -4%;
+            position: absolute;
+            left: -4%;
             width: 1.5rem;
             height: 1.5rem;
             text-align: center;
         }
-    i{
-        padding-left:  22px;
-        width: 20px;
-        color: rgb(126, 126, 126);
-    }
-    }
-    .choix{
-        display: flex;
-        position: relative;
-        box-shadow: 5px 8px 20px -1px rgba(0,0,0,0.55);
-        margin: 20px;
-        padding-top: 39px;
-        padding-bottom:22px ;
-        border-radius: $borderRadius;
-    &:hover{
-        background-color: rgba($couleurPrimaire,0.15);
-        i{
-            color: $couleurPrimaire;
+        i {
+            padding-left: 22px;
+            width: 20px;
+            color: rgb(126, 126, 126);
         }
     }
-        .text-icon{
+    .choix {
+        display: flex;
+        position: relative;
+        box-shadow: 5px 8px 20px -1px rgba(0, 0, 0, 0.55);
+        margin: 20px;
+        padding-top: 39px;
+        padding-bottom: 22px;
+        border-radius: $borderRadius;
+        &:hover {
+            background-color: rgba($couleurPrimaire, 0.15);
+            i {
+                color: $couleurPrimaire;
+            }
+        }
+        .text-icon {
             margin-left: 28px;
         }
     }
@@ -98,8 +93,8 @@ main {
     margin: auto;
     .card {
         position: relative;
-        border-radius:$borderRadiusRestaurant;
-        margin-bottom: 15px;
+        border-radius: $borderRadiusRestaurant;
+        margin-bottom: 19px;
         box-shadow: 0px 10px 33px -2px rgba(0, 0, 0, 0.5);
         text-decoration: none;
         color: black;
@@ -137,8 +132,8 @@ main {
     }
     .restaurants {
         width: 100%;
-        height: 1226px;
-        margin-left: 19px;
+        margin-bottom: 64px;
+        margin-left: 3px;
         background-color: rgba(246, 246, 246, 246);
     }
 }
