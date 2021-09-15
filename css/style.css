@@ -392,13 +392,19 @@ main .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   background: #f6f6f6;
   border-radius: 40px 40px 0;
   margin-top: -60px;
   position: absolute;
+}
+
+.fiche-resto .menu {
+  margin-left: 13px;
 }
 
 .fiche-resto .titre-et-coeur {
@@ -413,27 +419,85 @@ main .restaurants {
   font-size: 1.6em;
   padding-top: 33px;
   margin-left: 22px;
-  margin-bottom: 45px;
 }
 
 .fiche-resto .menu-titre {
-  -webkit-text-decoration: underline 4px #99e2d0;
-          text-decoration: underline 4px #99e2d0;
+  padding-bottom: 7px;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.fiche-resto p {
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.fiche-resto p .plats {
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.fiche-resto p:after {
+  content: "";
+  position: absolute;
+  width: 64%;
+  height: 4px;
+  bottom: 0;
+  left: -1%;
+  border-bottom: 4px solid #99e2d0;
+}
+
+.fiche-resto .plats:after {
+  content: "";
+  position: absolute;
+  width: 87%;
+  height: 4px;
+  bottom: 0;
+  left: -1%;
+  border-bottom: 4px solid #99e2d0;
 }
 
 .fiche-resto .card-menu {
+  position: relative;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 350px;
   border-radius: 20px;
   background: white;
-  -webkit-box-shadow: -1px 2px 15px 3px rgba(246, 246, 246, 0.35);
-          box-shadow: -1px 2px 15px 3px rgba(246, 246, 246, 0.35);
-  margin: 10px;
-  height: 69px;
+  -webkit-box-shadow: 1px 1px 9px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 9px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+
+.fiche-resto .card-menu:hover .choix-hidden {
+  right: 0;
+}
+
+.fiche-resto .card-menu .card-texte {
+  width: 90%;
+}
+
+.fiche-resto .card-menu:hover .card-texte {
+  width: 70%;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+.fiche-resto .card-menu .card-nom {
+  margin-bottom: 5px;
 }
 
 .fiche-resto .card-menu .card-accompagnement {
@@ -442,13 +506,37 @@ main .restaurants {
           justify-content: flex-start;
 }
 
-.fiche-resto .card-menu .card-choix {
+.fiche-resto .card-menu .choix-hidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: right 1s ease-in-out;
+  transition: right 1s ease-in-out;
+  position: absolute;
+  right: -57px;
+  width: 58px;
   background: #99e2d0;
+  height: 67px;
+  top: 0;
 }
 
-.fiche-resto .card-menu .card-choix i {
-  background: white;
-  color: #99e2d0;
+.fiche-resto .card-menu .choix-hidden i {
+  color: white;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.fiche-resto:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 button {
@@ -463,7 +551,7 @@ button {
           justify-content: center;
   margin-top: 34px;
   margin-bottom: 55px;
-  margin-left: 80px;
+  margin-left: 59px;
   width: 220px;
   height: 48px;
   text-align: center;

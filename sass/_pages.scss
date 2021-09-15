@@ -28,12 +28,17 @@
 }
 .fiche-resto {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     background: rgba(246, 246, 246, 246);
     border-radius: 40px 40px 0;
     margin-top: -60px;
     position: absolute;
+
+    
+    .menu {
+        margin-left: 13px;
+    }
     .titre-et-coeur {
         display: flex;
         flex-wrap: wrap;
@@ -42,53 +47,117 @@
         font-size: 1.6em;
         padding-top: 33px;
         margin-left: 22px;
-        margin-bottom: 45px;
     }
-    .menu-titre{
-            text-decoration: underline 4px rgb(153, 226, 208);
-            
-        
+    .menu-titre {
+        padding-bottom: 7px;
+        margin-top: 25px;
+        margin-left: 10px;
     }
-    .card-menu{
+    
+    p{
+        font-weight: 300;
+        display:inline-block ;  
+        padding-bottom: 5px;
+        position: relative;
+        .plats{
+        font-weight: 300;
+        display:inline-block ;  
+        padding-bottom: 5px;
+        position: relative;
+        }
+    }
+    p:after {
+        content: "";
+        position: absolute;
+        width: 64%;
+        height: 4px;
+        bottom: 0;
+        left: -1%;
+        border-bottom: 4px solid rgb(153, 226, 208);
+    }
+    .plats:after{
+        content: "";
+        position: absolute;
+        width: 87%;
+        height: 4px;
+        bottom: 0;
+        left: -1%;
+        border-bottom: 4px solid rgb(153, 226, 208);
+    }
+    .card-menu {
+        position: relative;
+        &:hover .choix-hidden{
+            right: 0;
+        }
+        overflow: hidden;
         display: flex;
-        flex-wrap: wrap;
+        align-items: flex-end;
         width: 350px;
         border-radius: 20px;
         background: white;
-        box-shadow: -1px 2px 15px 3px rgba(246,246,246,0.35);
-        margin: 10px;
-        height: 69px;
-        .card-accompagnement{
-            justify-content: flex-start;
-        }
-        .card-choix{
-            background: rgb(153, 226, 208);
-            i{
-                background: white;
-            color: rgb(153, 226, 208);
-            }
+        box-shadow: 1px 1px 9px 5px rgba(0,0,0,0.20);
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 12px;
+.card-texte{
+    width: 90%;
+}
+&:hover .card-texte{
+    width: 70%;
+    transition: width 1s ease-in-out;
+    transition-delay: 2s;
+}
+        .card-nom {
+            margin-bottom: 5px;
         }
 
+        .card-accompagnement {
+            justify-content: flex-start;
+        }
+        .choix-hidden {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: right 1s ease-in-out;
+            position: absolute;
+            right: -57px;
+            width: 58px;
+            background: rgb(153, 226, 208);
+            height: 67px;
+            top: 0;
+    
+            i {
+                color: white;
+                transition: transform 1s ease-in-out;
+            }
+        }
+    }
+    &:hover i{
+        transform: rotate(360deg);
+        
     }
 }
-button{
+button {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 34px;
     margin-bottom: 55px;
-    margin-left: 80px;
+    margin-left: 59px;
     width: 220px;
     height: 48px;
     text-align: center;
     border-radius: 30px;
-    background: linear-gradient(to left top, $couleurSecondaire, $couleurPrimaire);
+    background: linear-gradient(
+        to left top,
+        $couleurSecondaire,
+        $couleurPrimaire
+    );
     border: none;
     color: white;
     font-size: medium;
-
 }
-footer{
+footer {
     background-color: #535353;
     color: white;
     display: flex;
@@ -97,7 +166,6 @@ footer{
     width: 100%;
     position: relative;
     justify-content: flex-end;
-    
 
     a {
         color: white;
