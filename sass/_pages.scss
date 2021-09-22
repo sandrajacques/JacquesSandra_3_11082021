@@ -35,7 +35,6 @@
     margin-top: -60px;
     position: absolute;
 
-    
     .menu {
         margin-left: 13px;
     }
@@ -53,17 +52,17 @@
         margin-top: 25px;
         margin-left: 10px;
     }
-    
-    p{
+
+    p {
         font-weight: 300;
-        display:inline-block ;  
+        display: inline-block;
         padding-bottom: 5px;
         position: relative;
-        .plats{
-        font-weight: 300;
-        display:inline-block ;  
-        padding-bottom: 5px;
-        position: relative;
+        .plats {
+            font-weight: 300;
+            display: inline-block;
+            padding-bottom: 5px;
+            position: relative;
         }
     }
     p:after {
@@ -75,7 +74,7 @@
         left: -1%;
         border-bottom: 4px solid rgb(153, 226, 208);
     }
-    .plats:after{
+    .plats:after {
         content: "";
         position: absolute;
         width: 87%;
@@ -85,8 +84,11 @@
         border-bottom: 4px solid rgb(153, 226, 208);
     }
     .card-menu {
+        opacity: 0;
+        height: 65px;
         position: relative;
-        &:hover .choix-hidden{
+        animation: apparition 2s ease-in-out forwards;
+        &:hover .choix-hidden {
             right: 0;
         }
         overflow: hidden;
@@ -95,18 +97,25 @@
         width: 350px;
         border-radius: 20px;
         background: white;
-        box-shadow: 1px 1px 9px 5px rgba(0,0,0,0.20);
+        box-shadow: 1px 1px 9px 5px rgba(0, 0, 0, 0.2);
         margin-top: 10px;
         margin-bottom: 20px;
         padding: 12px;
-.card-texte{
-    width: 90%;
-}
-&:hover .card-texte{
-    width: 70%;
-    transition: width 1s ease-in-out;
-    transition-delay: 2s;
-}
+        .card-texte {
+            width: 90%;
+        }
+        .card-accompagnement {
+            //height: 17px;
+            word-wrap: normal;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &:hover .card-texte {
+            width: 70%;
+            transition: width 1s ease-in-out;
+            transition-delay: 2s;
+        }
         .card-nom {
             margin-bottom: 5px;
         }
@@ -125,16 +134,33 @@
             background: rgb(153, 226, 208);
             height: 67px;
             top: 0;
-    
+
             i {
                 color: white;
                 transition: transform 1s ease-in-out;
             }
         }
     }
-    &:hover i{
+    .apparition1{
+        animation-delay: 0;
+    }
+    .apparition2{
+        animation-delay: 1s;
+    }
+    .apparition3{
+        animation-delay: 2s;
+    }
+
+    &:hover i {
         transform: rotate(360deg);
-        
+    }
+}
+@keyframes apparition {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 button {
