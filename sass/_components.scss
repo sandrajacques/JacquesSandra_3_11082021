@@ -129,6 +129,38 @@ main {
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 25px;
+
+        .favoris {
+            position: relative;
+            margin-right: 20px;
+        }
+        i {
+            font-size: 21px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .coeur-plein {
+            color: #ff79da;
+        }
+        .coeur-contour {
+            font-size: 21px;
+            z-index: 2;
+            color: black;
+        }
+        .favoris:hover .carre {
+            top: 1rem;
+            
+        }
+        .carre {
+            height: 1.2rem;
+            font-size: 23px;
+            z-index: 1;
+            color: #f6f6f6;
+            vertical-align: text-bottom;
+            transition:top 2s ease-in-out;
+        }
     }
     .restaurants {
         width: 100%;

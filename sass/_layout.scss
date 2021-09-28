@@ -10,7 +10,7 @@ header {
             width: 160px;
             height: 23px;
         }
-
+    
         .localisation {
             background-color: rgb(234, 234, 234);
             width: 100%;
@@ -20,7 +20,11 @@ header {
             align-items: center;
         }
     }
-}
+    .fas{
+        color: black;
+        }
+    }
+
 footer {
     background-color: #535353;
     color: white;
@@ -28,7 +32,6 @@ footer {
     flex-direction: column;
     margin: auto;
     width: 100%;
-    
 
     a {
         color: white;

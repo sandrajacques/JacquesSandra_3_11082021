@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+/*variables, mixins et %placeholder*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,7 +13,25 @@ body {
 
 h1, h2, h3 {
   font-family: "Shrikhand", cursive;
-  margin-left: 20px;
+  margin-left: 3px;
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-restaurant {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
 }
 
 #preloader {
@@ -133,6 +152,10 @@ header .logo-header .localisation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+header .fas {
+  color: black;
 }
 
 footer {
@@ -351,6 +374,43 @@ main .cards-restaurant {
   margin-top: 25px;
 }
 
+main .cards-restaurant .favoris {
+  position: relative;
+  margin-right: 20px;
+}
+
+main .cards-restaurant i {
+  font-size: 21px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main .cards-restaurant .coeur-plein {
+  color: #ff79da;
+}
+
+main .cards-restaurant .coeur-contour {
+  font-size: 21px;
+  z-index: 2;
+  color: black;
+}
+
+main .cards-restaurant .favoris:hover .carre {
+  top: 1rem;
+}
+
+main .cards-restaurant .carre {
+  height: 1.2rem;
+  font-size: 23px;
+  z-index: 1;
+  color: #f6f6f6;
+  vertical-align: text-bottom;
+  -webkit-transition: top 2s ease-in-out;
+  transition: top 2s ease-in-out;
+}
+
 main .restaurants {
   width: 100%;
   margin-bottom: 64px;
@@ -413,6 +473,51 @@ main .restaurants {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  padding: 12px;
+  padding-right: 23px;
+}
+
+.fiche-resto .titre-et-coeur .favoris {
+  position: relative;
+}
+
+.fiche-resto .titre-et-coeur i {
+  font-size: 21px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fiche-resto .titre-et-coeur .coeur-plein {
+  color: #ff79da;
+}
+
+.fiche-resto .titre-et-coeur .coeur-contour {
+  font-size: 21px;
+  z-index: 2;
+  color: black;
+}
+
+.fiche-resto .titre-et-coeur .favoris:hover .carre {
+  top: 1rem;
+}
+
+.fiche-resto .titre-et-coeur .carre {
+  height: 1.2rem;
+  font-size: 23px;
+  z-index: 1;
+  color: #f6f6f6;
+  vertical-align: text-bottom;
+  -webkit-transition: top 2s ease-in-out;
+  transition: top 2s ease-in-out;
 }
 
 .fiche-resto .titre-fiche {
@@ -503,8 +608,8 @@ main .restaurants {
   width: 70%;
   -webkit-transition: width 1s ease-in-out;
   transition: width 1s ease-in-out;
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .fiche-resto .card-menu .card-nom {
@@ -556,6 +661,36 @@ main .restaurants {
 }
 
 .fiche-resto .apparition3 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.fiche-resto .apparition4 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.fiche-resto .apparition5 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.fiche-resto .apparition6 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.fiche-resto .apparition7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.fiche-resto .apparition8 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.fiche-resto .apparition9 {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
