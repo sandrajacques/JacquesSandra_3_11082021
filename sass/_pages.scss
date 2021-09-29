@@ -222,7 +222,6 @@ button {
     justify-content: center;
     margin-top: 34px;
     margin-bottom: 55px;
-    margin-left: 59px;
     width: 220px;
     height: 48px;
     text-align: center;
@@ -262,5 +261,27 @@ footer {
     }
     .menu-liste {
         padding: 15px 15px;
+    }
+}
+@media (min-width: 1023px) {
+    .fonctionnement {
+        padding-left: 100px;
+        padding-right: 100px;
+        .bloc-choix {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .choix {
+                min-width: 325px;
+            }
+        }
+    }
+    .restaurants{
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 22px;
+    }
+    footer .menu{
+        display: flex;
     }
 }

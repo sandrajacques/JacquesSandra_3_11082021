@@ -8,26 +8,32 @@
 body {
     font-family: "Roboto", sans-serif;
 }
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: "Shrikhand", cursive;
     margin-left: 3px;
 }
 
-@mixin tablette-only {
-    @media screen and (max-width:768px( $breakpoints)) {
-        @content;
+/*@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints,  tablette)) {
+        grid-template-columns: 1fr;
     }
 }
-.description{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-.card-restaurant{
+.description {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-    @include tablette-only
-
+    @include mobile-only;
+    @include tablette-only;
 }
+.card-restaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include mobile-only;
+    @include tablette-only;
+}
+@mixin tablette-only {
+    @media screen and (max-width : map-get($breakpoints, desktop)) {
+        grid-template-columns: 2fr;
+    }
+}*/
 

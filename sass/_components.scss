@@ -7,7 +7,6 @@
     justify-content: center;
     margin-top: 34px;
     margin-bottom: 55px;
-    margin-left: 80px;
     width: 220px;
     height: 48px;
     text-align: center;
@@ -16,6 +15,10 @@
     border: none;
 }
 .description {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -24,17 +27,18 @@
 
     h1 {
         font-size: 1.3em;
-        margin-left: 64px;
-        margin-right: 80px;
+        margin-left:auto;
+        margin-right:auto;
         margin-top: 43px;
+        text-align: center;
+        
     }
     p {
         justify-content: center;
         align-items: center;
         font-size: 0.99em;
-        margin-left: 39px;
-        margin-right: 29px;
         margin-top: 20px;
+        text-align: center;
     }
 }
 
@@ -128,7 +132,10 @@ main {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        justify-content: space-between;
+        margin: auto;
         margin-top: 25px;
+        max-width: 750px;
 
         .favoris {
             position: relative;

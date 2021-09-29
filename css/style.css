@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /*variables, mixins et %placeholder*/
+/*$breakpoints: (
+    tablette : 768px,
+    desktop : 1024px
+);*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -11,29 +15,34 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Shrikhand", cursive;
   margin-left: 3px;
 }
 
+/*@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints,  tablette)) {
+        grid-template-columns: 1fr;
+    }
+}
 .description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    display: grid;
+    @include mobile-only;
+    @include tablette-only;
 }
-
 .card-restaurant {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include mobile-only;
+    @include tablette-only;
 }
-
+@mixin tablette-only {
+    @media screen and (max-width : map-get($breakpoints, desktop)) {
+        grid-template-columns: 2fr;
+    }
+}*/
 #preloader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,6 +204,10 @@ footer .menu-liste {
 }
 
 /*variables, mixins et %placeholder*/
+/*$breakpoints: (
+    tablette : 768px,
+    desktop : 1024px
+);*/
 /*boutons*/
 .button1 {
   display: -webkit-box;
@@ -208,7 +221,6 @@ footer .menu-liste {
           justify-content: center;
   margin-top: 34px;
   margin-bottom: 55px;
-  margin-left: 80px;
   width: 220px;
   height: 48px;
   text-align: center;
@@ -219,6 +231,15 @@ footer .menu-liste {
 }
 
 .description {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -232,9 +253,10 @@ footer .menu-liste {
 
 .description h1 {
   font-size: 1.3em;
-  margin-left: 64px;
-  margin-right: 80px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 43px;
+  text-align: center;
 }
 
 .description p {
@@ -245,9 +267,8 @@ footer .menu-liste {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.99em;
-  margin-left: 39px;
-  margin-right: 29px;
   margin-top: 20px;
+  text-align: center;
 }
 
 .fonctionnement {
@@ -371,7 +392,12 @@ main .cards-restaurant {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
   margin-top: 25px;
+  max-width: 750px;
 }
 
 main .cards-restaurant .favoris {
@@ -418,6 +444,11 @@ main .restaurants {
   background-color: #f6f6f6;
 }
 
+/*variables, mixins et %placeholder*/
+/*$breakpoints: (
+    tablette : 768px,
+    desktop : 1024px
+);*/
 /*pages pour les restaurants*/
 .entete {
   display: -webkit-box;
@@ -731,7 +762,6 @@ button {
           justify-content: center;
   margin-top: 34px;
   margin-bottom: 55px;
-  margin-left: 59px;
   width: 220px;
   height: 48px;
   text-align: center;
@@ -783,5 +813,35 @@ footer .menu-liste {
   padding: 15px 15px;
 }
 
-/*variables, mixins et %placeholder*/
+@media (min-width: 1023px) {
+  .fonctionnement {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .fonctionnement .bloc-choix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .fonctionnement .bloc-choix .choix {
+    min-width: 325px;
+  }
+  .restaurants {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 22px;
+  }
+  footer .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /*# sourceMappingURL=style.css.map */
