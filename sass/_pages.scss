@@ -276,12 +276,36 @@ footer {
             }
         }
     }
-    .restaurants{
+    .restaurants {
+        display: block;
         padding-left: 100px;
         padding-right: 100px;
         padding-top: 22px;
+        .cards-restaurant {
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
     }
-    footer .menu{
+    footer .menu {
         display: flex;
+        flex-direction: column;
+        margin: 20px;
+        .logo-footer img{
+            margin: 20px;
+        }
     }
+}
+@media (max-width: 768px){
+    .fonctionnement{
+        margin: 20px;
+    }
+    
+.cards-restaurant{
+    flex-direction: column;
+    img{
+    width: 100%;
+    }
+}
 }

@@ -13,6 +13,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 21px;
 }
 
 h1,
@@ -299,6 +300,7 @@ footer .menu-liste {
   width: 1.5rem;
   height: 1.5rem;
   text-align: center;
+  font-size: 19px;
 }
 
 .fonctionnement .bloc-choix i {
@@ -353,7 +355,7 @@ main .card {
 }
 
 main .card img {
-  width: 335px;
+  width: 100%;
   height: 174px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -834,14 +836,44 @@ footer .menu-liste {
     min-width: 325px;
   }
   .restaurants {
+    display: block;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 22px;
+  }
+  .restaurants .cards-restaurant {
+    width: 100%;
+  }
+  .restaurants img {
+    width: 100%;
   }
   footer .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px;
+  }
+  footer .menu .logo-footer img {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fonctionnement {
+    margin: 20px;
+  }
+  .cards-restaurant {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards-restaurant img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
