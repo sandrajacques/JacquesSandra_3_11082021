@@ -346,6 +346,7 @@ main {
 }
 
 main .card {
+  width: 367px;
   position: relative;
   border-radius: 12px;
   margin-bottom: 19px;
@@ -901,6 +902,9 @@ footer .menu-liste {
   }
   .fiche-resto .card-menu {
     width: 98%;
+  }
+  main .card {
+    width: 100%;
   }
   .cards-restaurant {
     -webkit-box-orient: vertical;
