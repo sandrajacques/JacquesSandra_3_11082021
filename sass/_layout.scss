@@ -10,7 +10,7 @@ header {
             width: 160px;
             height: 23px;
         }
-    
+    }
         .localisation {
             background-color: rgb(234, 234, 234);
             width: 100%;
@@ -19,11 +19,12 @@ header {
             justify-content: center;
             align-items: center;
         }
-    }
-    .fas{
-        color: black;
+
+        .fas {
+            color: black;
         }
     }
+
 
 footer {
     background-color: #535353;
@@ -40,10 +41,10 @@ footer {
     }
     .logo-footer {
         display: flex;
-        padding: 27px 27px;
+        padding: 13px 27px 0px 27px;
         img {
-            width: 96px;
-            height: 15px;
+            width: 132px;
+        
         }
     }
     .menu-liste {

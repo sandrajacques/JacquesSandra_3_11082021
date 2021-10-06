@@ -75,8 +75,10 @@
         position: relative;
         box-shadow: 5px 8px 20px -1px rgba(0, 0, 0, 0.55);
         margin: 20px;
-        padding-top: 39px;
-        padding-bottom: 22px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding-top: 37px;
+        padding-bottom: 28px;
         border-radius: $borderRadius;
         &:hover {
             background-color: rgba($couleurPrimaire, 0.15);

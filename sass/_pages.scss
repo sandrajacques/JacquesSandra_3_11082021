@@ -18,6 +18,8 @@
     }
 }
 .photo-restaurant {
+    display: flex;
+    justify-content: center;
     img {
         width: 376px;
         height: 40vh;
@@ -119,7 +121,7 @@
         left: -1%;
         border-bottom: 4px solid rgb(153, 226, 208);
     }
-    .card-menu {
+        .card-menu {
         opacity: 0;
         height: 65px;
         position: relative;
@@ -220,6 +222,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
     margin-top: 34px;
     margin-bottom: 55px;
     width: 220px;
@@ -253,27 +256,35 @@ footer {
     }
     .logo-footer {
         display: flex;
-        padding: 27px 27px;
-        img {
+        /*padding: 27px 27px;*/
+        /*img {
             width: 96px;
-            height: 15px;
-        }
+        }*/
     }
     .menu-liste {
         padding: 15px 15px;
     }
 }
 @media (min-width: 1023px) {
+    /* version desktop*/
     .fonctionnement {
         padding-left: 100px;
         padding-right: 100px;
         .bloc-choix {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            //justify-content: space-between;
             .choix {
                 min-width: 325px;
             }
+        }
+    }
+    .card-menus{
+        width: 98% !important;
+        display: flex;
+        justify-content: space-between;
+        .card-menu{
+            max-width: 370px;
         }
     }
     .restaurants {
@@ -281,31 +292,54 @@ footer {
         padding-left: 100px;
         padding-right: 100px;
         padding-top: 22px;
-        .cards-restaurant {
+        width: 100%;
+        
+        img {
             width: 100%;
         }
-        img{
-            width: 100%;
-        }
+        
     }
-    footer .menu {
+
+    main .cards-restaurant {
+        
+        flex-direction: row !important;
+        width: 100%;
+        justify-content: space-between;
+        //justify-content: center;
+
+    }
+    .card{
+        width: 400px;
+    }
+    .menu-footer {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         margin: 20px;
-        .logo-footer img{
+        .logo-footer img {
             margin: 20px;
         }
     }
 }
-@media (max-width: 768px){
-    .fonctionnement{
+@media (min-width: 768px) {
+    /*version tablette*/
+    .fonctionnement {
         margin: 20px;
     }
-    
-.cards-restaurant{
-    flex-direction: column;
-    img{
-    width: 100%;
+    .card-menus{
+        width: 100%;
     }
-}
+    .fiche-resto .card-menu{
+        width: 98%;
+        
+    }
+
+    .cards-restaurant {
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
+    }
+    .photo-restaurant img {
+        width: 100%;
+    }
 }

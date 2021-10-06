@@ -13,7 +13,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 21px;
+  margin: auto;
 }
 
 h1,
@@ -149,7 +149,7 @@ header .logo-header img {
   height: 23px;
 }
 
-header .logo-header .localisation {
+header .localisation {
   background-color: #eaeaea;
   width: 100%;
   height: 48px;
@@ -192,12 +192,11 @@ footer .logo-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 27px 27px;
+  padding: 13px 27px 0px 27px;
 }
 
 footer .logo-footer img {
-  width: 96px;
-  height: 15px;
+  width: 132px;
 }
 
 footer .menu-liste {
@@ -317,8 +316,10 @@ footer .menu-liste {
   -webkit-box-shadow: 5px 8px 20px -1px rgba(0, 0, 0, 0.55);
           box-shadow: 5px 8px 20px -1px rgba(0, 0, 0, 0.55);
   margin: 20px;
-  padding-top: 39px;
-  padding-bottom: 22px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-top: 37px;
+  padding-bottom: 28px;
   border-radius: 20px;
 }
 
@@ -470,6 +471,15 @@ main .restaurants {
 .entete .logo img {
   width: 160px;
   height: 23px;
+}
+
+.photo-restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .photo-restaurant img {
@@ -762,6 +772,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: auto;
   margin-top: 34px;
   margin-bottom: 55px;
   width: 220px;
@@ -803,12 +814,10 @@ footer .logo-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 27px 27px;
-}
-
-footer .logo-footer img {
-  width: 96px;
-  height: 15px;
+  /*padding: 27px 27px;*/
+  /*img {
+            width: 96px;
+        }*/
 }
 
 footer .menu-liste {
@@ -816,6 +825,7 @@ footer .menu-liste {
 }
 
 @media (min-width: 1023px) {
+  /* version desktop*/
   .fonctionnement {
     padding-left: 100px;
     padding-right: 100px;
@@ -828,43 +838,69 @@ footer .menu-liste {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .fonctionnement .bloc-choix .choix {
+    min-width: 325px;
+  }
+  .card-menus {
+    width: 98% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .fonctionnement .bloc-choix .choix {
-    min-width: 325px;
+  .card-menus .card-menu {
+    max-width: 370px;
   }
   .restaurants {
     display: block;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 22px;
-  }
-  .restaurants .cards-restaurant {
     width: 100%;
   }
   .restaurants img {
     width: 100%;
   }
-  footer .menu {
+  main .cards-restaurant {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card {
+    width: 400px;
+  }
+  .menu-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 20px;
   }
-  footer .menu .logo-footer img {
+  .menu-footer .logo-footer img {
     margin: 20px;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  /*version tablette*/
   .fonctionnement {
     margin: 20px;
+  }
+  .card-menus {
+    width: 100%;
+  }
+  .fiche-resto .card-menu {
+    width: 98%;
   }
   .cards-restaurant {
     -webkit-box-orient: vertical;
@@ -873,6 +909,9 @@ footer .menu-liste {
             flex-direction: column;
   }
   .cards-restaurant img {
+    width: 100%;
+  }
+  .photo-restaurant img {
     width: 100%;
   }
 }
