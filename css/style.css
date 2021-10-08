@@ -396,12 +396,8 @@ main .cards-restaurant {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: auto;
   margin-top: 25px;
-  max-width: 750px;
 }
 
 main .cards-restaurant .favoris {
