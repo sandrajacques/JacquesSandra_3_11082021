@@ -18,6 +18,10 @@
     );
     border: none;
 }
+.button1:hover{
+    opacity: 0.8;
+    box-shadow: 1rem 1rem 20px $couleurSecondaire(0 0 0 /25%);
+}
 .description {
     display: flex;
     flex-direction: column;
@@ -31,6 +35,7 @@
     background-color: rgba(246, 246, 246, 246);
 
     h1 {
+        display: flex;
         font-size: 1.3em;
         text-align: center;
         margin-left: auto;
