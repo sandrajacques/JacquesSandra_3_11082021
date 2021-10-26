@@ -11,34 +11,49 @@
     height: 48px;
     text-align: center;
     border-radius: 30px;
-    background: linear-gradient(to left top, $couleurSecondaire, $couleurPrimaire);
+    background: linear-gradient(
+        to left top,
+        $couleurSecondaire,
+        $couleurPrimaire
+    );
     border: none;
 }
 .description {
-    padding-left: 2rem;
-    padding-right: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
     width: 100%;
     margin: auto;
     background-color: rgba(246, 246, 246, 246);
 
     h1 {
         font-size: 1.3em;
-        margin-left:auto;
-        margin-right:auto;
-        margin-top: 43px;
         text-align: center;
-        
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 43px;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 0.99em;
+        }
     }
     p {
-        justify-content: center;
-        align-items: center;
-        font-size: 0.99em;
-        margin-top: 20px;
-        text-align: center;
+        font-size: 1.1em;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 0.99em;
+        }
     }
 }
 
@@ -64,7 +79,6 @@
             text-align: center;
             color: white;
             font-size: 17px;
-            
         }
         i {
             padding-left: 22px;
@@ -140,7 +154,6 @@ main {
         justify-content: center;
         margin: auto;
         margin-top: 25px;
-        
 
         .favoris {
             position: relative;
@@ -163,7 +176,6 @@ main {
         }
         .favoris:hover .carre {
             top: 1rem;
-            
         }
         .carre {
             height: 1.2rem;
@@ -171,7 +183,7 @@ main {
             z-index: 1;
             color: #f6f6f6;
             vertical-align: text-bottom;
-            transition:top 2s ease-in-out;
+            transition: top 2s ease-in-out;
         }
     }
     .restaurants {
