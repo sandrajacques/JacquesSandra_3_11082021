@@ -145,8 +145,9 @@ header .logo-header {
 }
 
 header .logo-header img {
-  width: 160px;
-  height: 23px;
+  width: 148px;
+  height: 36px;
+  padding-bottom: 10px;
 }
 
 header .localisation {
@@ -180,6 +181,7 @@ footer {
           flex-direction: column;
   margin: auto;
   width: 100%;
+  padding-top: 10px;
 }
 
 footer a {
@@ -188,15 +190,15 @@ footer a {
   text-decoration: none;
 }
 
-footer .logo-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 13px 27px 0px 27px;
+footer span.logo-footer {
+  font-family: "Shrikhand",cursive;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  margin-left: 10px;
 }
 
-footer .logo-footer img {
-  width: 132px;
+footer .menu-footer {
+  padding: 0px 27px 0px 27px;
 }
 
 footer .menu-liste {
