@@ -299,7 +299,8 @@ footer .menu-liste {
   width: 1.5rem;
   height: 1.5rem;
   text-align: center;
-  font-size: 19px;
+  color: white;
+  font-size: 17px;
 }
 
 .fonctionnement .bloc-choix i {
