@@ -20,7 +20,7 @@ h1,
 h2,
 h3 {
   font-family: "Shrikhand", cursive;
-  margin-left: 3px;
+  margin-left: 21px;
 }
 
 /*@mixin mobile-only {
@@ -234,14 +234,12 @@ footer .menu-liste {
 
 .button1:hover {
   opacity: 0.8;
-  -webkit-box-shadow: 1rem 1rem 20px #FF79da 0 0 0/25%;
-          box-shadow: 1rem 1rem 20px #FF79da 0 0 0/25%;
+  -webkit-box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
 }
 
 .description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -264,6 +262,16 @@ footer .menu-liste {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.3em;
   text-align: center;
   margin-left: auto;
@@ -286,6 +294,16 @@ footer .menu-liste {
 }
 
 .description p {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.1em;
 }
 
@@ -307,7 +325,7 @@ footer .menu-liste {
   position: relative;
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 48px;
 }
 
 .fonctionnement .bloc-choix {
@@ -376,6 +394,7 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: auto;
+  background-color: #f6f6f6;
 }
 
 main .card {
@@ -475,6 +494,7 @@ main .restaurants {
   margin-bottom: 64px;
   margin-left: 3px;
   background-color: #f6f6f6;
+  padding-top: 40px;
 }
 
 /*variables, mixins et %placeholder*/
@@ -682,8 +702,7 @@ main .restaurants {
   width: 70%;
   -webkit-transition: width 1s ease-in-out;
   transition: width 1s ease-in-out;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  /*transition-delay: 1s;*/
 }
 
 .fiche-resto .card-menu .card-nom {
@@ -725,8 +744,7 @@ main .restaurants {
 }
 
 .fiche-resto .apparition1 {
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
+  /*animation-delay: 0;*/
 }
 
 .fiche-resto .apparition2 {
@@ -818,8 +836,8 @@ button {
 
 button:hover {
   opacity: 0.8;
-  -webkit-box-shadow: 1rem 1rem 20px #FF79da 0 0 0/25%;
-          box-shadow: 1rem 1rem 20px #FF79da 0 0 0/25%;
+  -webkit-box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
 }
 
 footer {
