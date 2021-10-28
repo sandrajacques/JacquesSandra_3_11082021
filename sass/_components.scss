@@ -11,6 +11,7 @@
     height: 48px;
     text-align: center;
     border-radius: 30px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.34);
     background: linear-gradient(
         to left top,
         $couleurSecondaire,
@@ -20,7 +21,7 @@
 }
 .button1:hover {
     opacity: 0.8;
-    box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6);
 }
 .description {
     display: block;
@@ -83,11 +84,12 @@
             border-radius: 100px;
             position: absolute;
             left: -4%;
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.7rem;
+            height: 1.7rem;
             text-align: center;
             color: white;
             font-size: 17px;
+            padding-top: 3px;
         }
         i {
             padding-left: 22px;
@@ -183,9 +185,13 @@ main {
             font-size: 21px;
             z-index: 2;
             color: black;
+            transition: opacity 2s ease-in-out;
         }
         .favoris:hover .carre {
             top: 1rem;
+        }
+        .favoris:hover .coeur-contour {
+            opacity: 0;
         }
         .carre {
             height: 1.2rem;
@@ -200,7 +206,7 @@ main {
         width: 99%;
         margin-bottom: 64px;
         margin-left: 3px;
-        background-color: rgba(246, 246, 246, 246); 
-        padding-top: 40px;     
+        background-color: rgba(246, 246, 246, 246);
+        padding-top: 40px;
     }
 }

@@ -67,9 +67,14 @@
             font-size: 21px;
             z-index: 2;
             color: black;
+            transition: opacity 2s ease-in-out;
         }
         .favoris:hover .carre {
-            top: 1rem;
+            top: 1.5rem;
+        }
+        .favoris:hover .coeur-contour{
+            opacity: 0;
+            
         }
         .carre {
             height: 1.2rem;
@@ -129,6 +134,9 @@
         &:hover .choix-hidden {
             right: 0;
         }
+        &:hover i {
+            transform: rotate(360deg);
+        }
         overflow: hidden;
         display: flex;
         align-items: flex-end;
@@ -178,9 +186,7 @@
             }
         }
     }
-    .apparition1 {
-        /*animation-delay: 0;*/
-    }
+    
     .apparition2 {
         animation-delay: 1s;
     }
@@ -206,9 +212,7 @@
         animation-delay: 2s;
     }
 
-    &:hover i {
-        transform: rotate(360deg);
-    }
+   
 }
 @keyframes apparition {
     0% {
@@ -229,6 +233,7 @@ button {
     height: 48px;
     text-align: center;
     border-radius: 30px;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.34);
     background: linear-gradient(
         to left top,
         $couleurSecondaire,
@@ -240,7 +245,7 @@ button {
 }
 button:hover{
     opacity: 0.8;
-    box-shadow: 0px 5px 43px 10px rgba(0,0,0,0.6);
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6);
 }
 
 footer {

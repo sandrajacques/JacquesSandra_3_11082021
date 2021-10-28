@@ -44,6 +44,11 @@ h3 {
         grid-template-columns: 2fr;
     }
 }*/
+header, main, footer {
+  -webkit-animation: demarage 3s forwards linear;
+          animation: demarage 3s forwards linear;
+}
+
 #preloader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,7 +58,7 @@ h3 {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -128,6 +133,34 @@ h3 {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes demarage {
+  0% {
+    height: 0px;
+    overflow: hidden;
+  }
+  99% {
+    height: 0px;
+    overflow: hidden;
+  }
+  100% {
+    height: auto;
+  }
+}
+
+@keyframes demarage {
+  0% {
+    height: 0px;
+    overflow: hidden;
+  }
+  99% {
+    height: 0px;
+    overflow: hidden;
+  }
+  100% {
+    height: auto;
   }
 }
 
@@ -227,6 +260,8 @@ footer .menu-liste {
   height: 48px;
   text-align: center;
   border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.34);
+          box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.34);
   background: -webkit-gradient(linear, right bottom, left top, from(#FF79da), to(#9356DC));
   background: linear-gradient(to left top, #FF79da, #9356DC);
   border: none;
@@ -234,8 +269,8 @@ footer .menu-liste {
 
 .button1:hover {
   opacity: 0.8;
-  -webkit-box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6);
 }
 
 .description {
@@ -346,11 +381,12 @@ footer .menu-liste {
   border-radius: 100px;
   position: absolute;
   left: -4%;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.7rem;
+  height: 1.7rem;
   text-align: center;
   color: white;
   font-size: 17px;
+  padding-top: 3px;
 }
 
 .fonctionnement .bloc-choix i {
@@ -473,10 +509,16 @@ main .cards-restaurant .coeur-contour {
   font-size: 21px;
   z-index: 2;
   color: black;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
 main .cards-restaurant .favoris:hover .carre {
   top: 1rem;
+}
+
+main .cards-restaurant .favoris:hover .coeur-contour {
+  opacity: 0;
 }
 
 main .cards-restaurant .carre {
@@ -598,10 +640,16 @@ main .restaurants {
   font-size: 21px;
   z-index: 2;
   color: black;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
 .fiche-resto .titre-et-coeur .favoris:hover .carre {
-  top: 1rem;
+  top: 1.5rem;
+}
+
+.fiche-resto .titre-et-coeur .favoris:hover .coeur-contour {
+  opacity: 0;
 }
 
 .fiche-resto .titre-et-coeur .carre {
@@ -687,6 +735,11 @@ main .restaurants {
   right: 0;
 }
 
+.fiche-resto .card-menu:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .fiche-resto .card-menu .card-texte {
   width: 90%;
 }
@@ -743,10 +796,6 @@ main .restaurants {
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
-.fiche-resto .apparition1 {
-  /*animation-delay: 0;*/
-}
-
 .fiche-resto .apparition2 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
@@ -787,11 +836,6 @@ main .restaurants {
           animation-delay: 2s;
 }
 
-.fiche-resto:hover i {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
 @-webkit-keyframes apparition {
   0% {
     opacity: 0;
@@ -827,6 +871,8 @@ button {
   height: 48px;
   text-align: center;
   border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.34);
+          box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.34);
   background: -webkit-gradient(linear, right bottom, left top, from(#FF79da), to(#9356DC));
   background: linear-gradient(to left top, #FF79da, #9356DC);
   border: none;
@@ -836,8 +882,8 @@ button {
 
 button:hover {
   opacity: 0.8;
-  -webkit-box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 5px 43px 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6);
 }
 
 footer {
