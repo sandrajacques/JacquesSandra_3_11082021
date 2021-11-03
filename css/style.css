@@ -914,10 +914,6 @@ footer .logo-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*padding: 27px 27px;*/
-  /*img {
-            width: 96px;
-        }*/
 }
 
 footer .menu-liste {
@@ -942,26 +938,26 @@ footer .menu-liste {
   .fonctionnement .bloc-choix .choix {
     min-width: 325px;
   }
-  .card-menus {
-    width: 98% !important;
+  .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .menu .card-menus {
+    width: 98% !important;
+    display: block;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .card-menus .card-menu {
-    max-width: 370px;
-  }
-  .restaurants {
+  .menu .restaurants {
     display: block;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 22px;
     width: 100%;
   }
-  .restaurants img {
+  .menu .restaurants img {
     width: 100%;
   }
   main .cards-restaurant {
