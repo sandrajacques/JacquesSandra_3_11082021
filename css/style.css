@@ -836,6 +836,11 @@ main .restaurants {
           animation-delay: 2s;
 }
 
+.fiche-resto .apparition10 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
 @-webkit-keyframes apparition {
   0% {
     opacity: 0;
